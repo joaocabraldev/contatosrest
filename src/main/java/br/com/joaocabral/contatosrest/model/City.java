@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class City {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private boolean capital;
