@@ -5,6 +5,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -15,7 +16,8 @@ public class City {
 	private Long id;
 	private String name;
 	private boolean capital;
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(targetEntity=State.class, fetch = FetchType.EAGER)
+	@JoinColumn(name="state_id")
 	private State state;
 
 	public Long getId() {
