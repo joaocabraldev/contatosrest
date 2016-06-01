@@ -1,11 +1,9 @@
 package br.com.joaocabral.contatosrest.model;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -17,8 +15,7 @@ public class City {
 	private String name;
 	private boolean capital;
 	
-	@ManyToOne(targetEntity=State.class, fetch = FetchType.EAGER)
-	@JoinColumn(name = "state_id")
+	@ManyToOne(targetEntity=State.class)
 	private State state;
 
 	public Long getId() {
