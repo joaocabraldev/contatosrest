@@ -9,3 +9,8 @@ INSERT INTO CITY (id, capital, name, state_id) VALUES('2', true,'Cuiabá', '2');
 INSERT INTO CITY (id, capital, name, state_id) VALUES('3', true,'Gampo Grande', '3');
 
 ALTER SEQUENCE CITY_ID_SEQ RESTART WITH 4;
+
+INSERT INTO USER (id, name, login, password) VALUES ('1', 'Administrador', 'admin', 'admin');
+INSERT INTO USER (id, name, login, password) VALUES ('2', 'Usuário', 'user', 'user');
+
+ALTER SEQUENCE CITY_ID_SEQ RESTART WITH 3;

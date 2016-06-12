@@ -11,10 +11,19 @@ import org.springframework.web.filter.CorsFilter;
 
 import br.com.joaocabral.contatosrest.model.City;
 import br.com.joaocabral.contatosrest.model.State;
+import br.com.joaocabral.contatosrest.model.User;
 
+/**
+ * Configurações personalizadas da aplicação.
+ * @author João Antônio Cabral.
+ */
 @Configuration
 public class MainConfig extends RepositoryRestMvcConfiguration {
 
+	/**
+	 * Bean de configuração de CORS.
+	 * @return Configurações de CORS.
+	 */
 	@Bean
 	public FilterRegistrationBean corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -37,10 +46,13 @@ public class MainConfig extends RepositoryRestMvcConfiguration {
 	    return bean;
 	}
 	
+	/**
+	 * Método de configuração REST.
+	 */
 	@Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		config.setBasePath("/rest");
-		config.exposeIdsFor(State.class, City.class);
+		config.exposeIdsFor(State.class, City.class, User.class);
     }
 	
 }
