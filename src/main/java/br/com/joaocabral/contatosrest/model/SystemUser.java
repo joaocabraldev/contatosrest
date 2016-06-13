@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author João Antônio Cabral.
  */
 @Entity
-public class User implements Serializable {
+public class SystemUser implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -106,7 +106,7 @@ public class User implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		SystemUser other = (SystemUser) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -117,7 +117,7 @@ public class User implements Serializable {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + "]";
+		return name;
 	}
 
 }
