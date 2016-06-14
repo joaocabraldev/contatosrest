@@ -17,6 +17,6 @@ public interface Users extends PagingAndSortingRepository<SystemUser, Long> {
 	 * Busca um Usuário por Login.
 	 * @param login Login a ser pesquisado.
 	 */
-	SystemUser findOneByLogin(@Param("login") login);
+	SystemUser findOneByLogin(@Param("login") String login);
 	
 }
