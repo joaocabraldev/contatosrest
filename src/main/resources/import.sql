@@ -14,3 +14,9 @@ INSERT INTO SYSTEM_USER (id, name, login, password) VALUES ('1', 'Administrador'
 INSERT INTO SYSTEM_USER (id, name, login, password) VALUES ('2', 'Usuário', 'user', 'user');
 
 ALTER SEQUENCE SYSTEM_USER_ID_SEQ RESTART WITH 3;
+
+INSERT INTO CONTACT (id, name, state_id, city_id, district, street, phone, email) VALUES ('1', 'José da Silva', '1', '1', 'Centro', 'Av. Goiás', '6232146598', 'josedasilva@email.com');
+INSERT INTO CONTACT (id, name, state_id, city_id, district, street, phone, email) VALUES ('2', 'Maria Barbosa', '1', '1', 'Centro', 'Av. Goiás', '6232147845', 'mariabarbosa@email.com');
+INSERT INTO CONTACT (id, name, state_id, city_id, district, street, phone, email) VALUES ('3', 'Ana Lins', '1', '1', 'Centro', 'Av. Goiás', '6232147391', 'analins@email.com');
+
+ALTER SEQUENCE CONTACT_ID_SEQ RESTART WITH 4;

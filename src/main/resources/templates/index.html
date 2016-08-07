@@ -3,19 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Contatos Rest</title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<h1>Contatos Rest</h1>
-		<p>
-			Sistema de Contatos usando Spring Boot. Serve os Contatos e outras informações através de uma API REST.
-		</p>
-		<ul>
-			<li>
-				<a href="/rest/states">Estados</a>
-			</li>
-			<li>
-				<a href="/rest/cities">Cidades</a>
-			</li>
-		</ul>
+		<div class="container-fluid">
+			<div class="page-header">
+				<h1>Contatos Rest</h1>
+				<h1>
+					<small>
+						Sistema de Contatos usando Spring Boot. Serve os Contatos e outras informações através de uma API REST.
+					</small>
+				</h1>
+			</div>
+			
+			<div class="list-group">
+				<a class="list-group-item" href="/rest/states">Estados</a>
+				<a class="list-group-item" href="/rest/cities">Cidades</a>
+				<a class="list-group-item" href="/rest/systemUsers">Usuários</a>
+				<a class="list-group-item" href="/rest/contacts">Contatos</a>
+			</div>
+		</div>
+
 	</body>
 </html>

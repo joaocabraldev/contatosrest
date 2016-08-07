@@ -10,6 +10,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import br.com.joaocabral.contatosrest.model.City;
+import br.com.joaocabral.contatosrest.model.Contact;
 import br.com.joaocabral.contatosrest.model.State;
 import br.com.joaocabral.contatosrest.model.SystemUser;
 
@@ -52,7 +53,7 @@ public class MainConfig extends RepositoryRestMvcConfiguration {
 	@Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		config.setBasePath("/rest");
-		config.exposeIdsFor(State.class, City.class, SystemUser.class);
+		config.exposeIdsFor(State.class, City.class, SystemUser.class, Contact.class);
     }
 	
 }
